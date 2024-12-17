@@ -1,0 +1,92 @@
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for appearance */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #0d0644b0; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded edges for the scrollbar handle */
+}
+
+/* Scrollbar Track Background */
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent scrollbar track */
+}
+
+.chatList {
+    flex: 1;
+    overflow: auto;
+
+    .search {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+        .searchBar {
+            flex: 1;
+            background-color: rgba(22, 22, 150, 0.315);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 10px;
+
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                flex: 1;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .add {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(22, 22, 150, 0.315);
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .texts{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span{
+                font-weight: 500;
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+}
